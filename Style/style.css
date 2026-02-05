@@ -47,3 +47,79 @@ header{
     border-radius: 10px;
 }
 /* home section */
+.home-section{
+   display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 60px 140px;
+
+   
+}
+.content{
+    max-width: 50%;
+}
+.content h1{
+    color: #415456;
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+.content h1 span{
+    color: #3da8f5;
+    
+}
+.content p{
+    color: #ababab;
+    margin-bottom: 15px;
+}
+.content button{
+    color: #ffff;
+    background-color: #3da8f5;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.icon-store{
+    margin-right: 2px;
+}
+.img{
+    max-width: 45%;
+    
+}
+.achivements{
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    background-color: #3ea9fa;
+    color:  #263641;
+      padding: 15px 20px;
+     max-width: 1100px;
+     margin: 0 auto;
+  
+}
+.achivement{
+   font-size: 1.4rem;
+   font-weight: 400;
+   
+}
+.achivements p{
+    font-size: 1.1rem;
+    font-weight:800;
+  padding: 0 30px;
+
+}
+.achivements p{
+      border-left: 1px solid rgb(255, 255, 255,0.2) ;
+     
+}
+.achivements p:last-child {
+  border-right: none;
+  padding-right: 30px;
+}
+
+.achivements span{
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 300;
+
+}
