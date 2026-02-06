@@ -47,17 +47,18 @@
       </div>
       <section class="our-services">
         <div class="container">
+              <div class="left-div">
           <h1>Our Services</h1>
           <p>Click on Add to cart button to add the services to your cart</p>
-          <div class="left-div">
+        
             <table>
               <tr>
                 <td>
                   <div class="service">
                     <ion-icon name="shirt-outline"></ion-icon>Dry Cleaning
                     <span class="price">&#8377;200</span>
-                  </div>
-                  <button>Add Item</button>
+                 </div>
+                  <button>Add Item <ion-icon name="add-circle-outline" class="plus"></ion-icon></button> 
                 </td>
               </tr>
               <tr>
@@ -66,7 +67,7 @@
                     <ion-icon name="bag-handle-outline"></ion-icon> Wash & Fold
                     <span class="price">&#8377;100</span>
                   </div>
-                  <button>Add Item</button>
+                  <button>Add Item<ion-icon name="add-circle-outline" class="plus"></ion-icon></button>
                 </td>
               </tr>
               <tr>
@@ -75,7 +76,7 @@
                     <ion-icon name="hand-left-outline"></ion-icon> Ironing
                     <span class="price">&#8377;30</span>
                   </div>
-                  <button>Add Item</button>
+                  <button>Add Item<ion-icon name="add-circle-outline" class="plus"></ion-icon></button>
                 </td>
               </tr>
               <tr>
@@ -84,7 +85,7 @@
                     <ion-icon name="hand-left-outline"></ion-icon> Stain Removal
                     <span class="price">&#8377;500</span>
                   </div>
-                  <button>Add Item</button>
+                  <button>Add Item<ion-icon name="add-circle-outline" class="plus"></ion-icon></button>
                 </td>
               </tr>
               <tr>
@@ -93,24 +94,24 @@
                     <ion-icon name="bag-handle-outline"></ion-icon>Leather &
                     suede cleaning<span class="price">&#8377;999</span>
                   </div>
-                  <button>Add Item</button>
+                  <button>Add Item<ion-icon name="add-circle-outline" class="plus"></ion-icon></button>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td class="last">
                   <div class="service">
                     <ion-icon name="shirt-outline"></ion-icon> Wedding dress
                     cleaning <span class="price">&#8377;2800</span>
                   </div>
-                  <button>Add Item</button>
+                  <button>Add Item<ion-icon name="add-circle-outline" class="plus"></ion-icon></button>
                 </td>
               </tr>
             </table>
-            <p class="message">Add the item to the cart and book now</p>
+            <p class="message"><ion-icon name="alert-circle-outline"></ion-icon>Add the item to the cart and book now</p>
           </div>
           <div class="right-div">
             <div class="added-items">
-              <h2>Addd Items</h2>
+              <h2>Added Items</h2>
               <table>
                 <tr>
                   <th>S.No</th>
@@ -118,30 +119,46 @@
                   <th>Price</th>
                 </tr>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <!-- <td>1</td>
+                  <td>dfsd</td>
+                  <td>234</td> -->
+                  <td colspan="3">
+                   <div class="alert-message">
+                    <div class="alert"><ion-icon name="alert-circle-outline" class="alert-lg"></ion-icon></div>
+                    <p>Add items to the cart using Service bar</p>
+                    </div>
                 </tr>
-                <tr>
-                  <td colspan="2">Total Amount</td>
-                  <td></td>
+                <tr class="amount">
+                  <td colspan="2" class="total-amount">Total Amount</td>
+                  <td class="final-price">&#8377;0</td>
                 </tr>
               </table>
-            </div>
+              </div>
+          
             <div class="book-now">
               <h2>Book Now</h2>
               <form action="#">
-                <label for="name"> Full Name </label>
-                <input type="text" placeholder="Enter Name" />
-                <label for="email">Email ID</label>
-                <input type="email" placeholder="Enter Email" />
-                <label for="Phone"> Phone Number </label>
-                <input type="phone" placeholder="0000000" />
+               <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter Name">
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label>Email ID</label>
+        <input type="email" placeholder="Enter Email">
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="0000000">
+      </div>
+      </div>
                 <button>Book Now</button>
               </form>
             </div>
+              </div> 
           </div>
-        </div>
       </section>
     </main>
   </body>
