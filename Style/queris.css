@@ -1,0 +1,331 @@
+/* big tablets 1200px */
+@media only screen and (max-width: 1200px) {
+        .main-nav{
+            font-size: 1.4rem;
+        }
+        .main-nav li a{
+            margin-right: 25px;
+        }
+        .content{
+            padding:  0 60px;
+        }
+        .content h1{
+            font-size: 3rem;
+        }
+        .content p{
+            font-size: 1.1rem;
+        }
+        .our-services{
+            padding: 20px 10px;
+        }
+        .left-div h1,
+        .right-div h2{
+            font-size: 1.9rem;
+        }
+        .service{
+            font-size: 1.2rem;
+        }
+        .added-items {
+            font-size: 1.2rem;
+        }
+        .book-now label{
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+        .row img{
+            height: 120px;
+            margin-bottom: 10px;
+        }
+        .row h4{
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+        }
+        .row p{
+            font-size: 1.2rem;
+        }
+        .footer-service{
+            padding: 0 15px;
+        }
+        .subscibe input{
+           width: 40%;
+
+        }
+        .link h5{
+            font-size: 1.2rem;
+        }
+        .row .logo{
+            font-size: 1.6rem;
+        }
+}
+
+
+/* small tablet to big tablets from  767px to 1023px */
+@media only screen and (max-width: 1023px) {
+       .main-nav{
+            font-size: 1.2rem;
+        }
+        .main-nav li a{
+            margin-right: 15px;
+        }
+        .home-section{
+            padding: 15px 0 15px  0;
+        }
+        .content{
+            padding: 0 60px;
+        }
+        .content h1{
+            font-size: 2.4rem;
+        }
+        .content button{
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .achivements{
+            width: 80%;
+        }
+        .achivement-title{
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .achivement-item strong{
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .achivement-item span{
+            font-size: 1rem;
+        }
+        .our-services{
+            padding: 10px;
+        }
+        table button{
+            display: flex;
+            position: relative;
+        }
+        .alert-message{
+           text-align: center;
+        }
+         .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      
+    }
+    .row img{
+        
+        height: 80px;
+       
+    }
+    .row h4{
+        font-size: 1.7rem;
+    }
+    .row p{
+        font-size: 1.2rem;
+    }
+    footer{
+        padding: 10px 0 0 0;
+    }
+    .subscibe{
+        display: flex;
+        padding: 30px;
+        margin-top: 15px;
+    }
+    .subscibe h4{
+        font-size: 2.2rem;
+        
+        margin-right: 40px;
+    }
+    .subscibe input{
+        width: 60%;
+    }
+    .footer-links{
+        padding: 30px;
+    }
+    .row .link{
+        width: 100%;
+    }
+    .row .logo{
+        font-size: 1.7rem;
+    }
+    .link h5{
+        font-size: 1.1rem;
+    }
+}
+
+
+/* small phones to small tablet from 481px to 767px */
+@media only screen and (max-width: 767px) {
+        .main-nav{
+            font-size: 1.1rem;
+        }
+        .main-nav li a{
+            margin-right: 15px;
+        }
+        .home-section{
+            padding: 10px 0 10px  0;
+        }
+        .content{
+            padding: 0 60px;
+        }
+        .content h1{
+            font-size: 2rem;
+        }
+        .content button{
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .achivements{
+            width: 100%;
+        }
+        .achivement-title{
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        .achivement-item strong{
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        .achivement-item span{
+            font-size: 0.8rem;
+        }
+        .our-services{
+            padding: 10px;
+        }
+         table button{
+            display: flex;
+            position: relative;
+        }
+        .alert-message{
+           text-align: center;
+        }
+         .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      
+    }
+    .row img{
+        
+        height: 70px;
+       
+    }
+    footer{
+        padding: 10px 0 0 0;
+    }
+    .subscibe{
+        display: flex;
+        padding: 20px;
+        margin-top: 15px;
+    }
+    .subscibe h4{
+        font-size: 1.9rem;
+        
+        margin-right: 30px;
+    }
+    .subscibe input{
+        width: 50%;
+    }
+    .footer-links{
+        padding: 30px;
+    }
+    .row .link{
+        width: 100%;
+    }
+}
+
+/* small phones from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    .main-nav{
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+ 
+    .main-nav a{
+        visibility: hidden;
+    }
+    .content h1{
+        font-size: 1.8rem;
+    
+    }
+    .content{
+       padding: 0 40px;
+    }
+    .content p{
+        width: 120px;
+    }
+    .content button{
+        padding: 10px 15px;
+        font-size: 0.7rem;
+    }
+    .home-section img{
+      height: 300px;
+      width: 300px;
+      
+    }
+    .achivements{
+        width: 100%;
+        padding: 15px 25px;
+    }
+    .achivement-title{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .achivement-item strong{
+        font-size: 1.1rem;
+        font-weight: 600;
+    
+    }
+    .achivement-item span{
+        font-size: 0.6rem;
+    }
+    .container{
+        grid-template-columns: 1fr;
+      
+    }
+    .our-services{
+        padding: 30px 10px;
+    }
+    .left-div{
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+    .right-div{
+      margin-bottom: 5px;
+    }
+    .added-items{
+        margin-right: 0;
+    }
+    .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      
+    }
+    .row img{
+        
+        height: 60px;
+       
+    }
+    footer{
+        padding: 10px 0 0 0;
+    }
+    .subscibe{
+        padding: 20px;
+        margin-top: 15px;
+    }
+    .subscibe h4{
+        font-size: 1.8rem;
+        margin-right: 15px;
+        margin-right: 20px;
+    }
+    .subscibe input{
+        width: 50%;
+    }
+    .footer-links{
+        padding: 20px;
+    }
+    .row .link{
+        width: 100%;
+    }
+}

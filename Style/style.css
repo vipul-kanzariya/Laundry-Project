@@ -3,10 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+  html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
 html{
     font-size: 1rem;
     font-family: sans-serif;
     scroll-behavior: smooth;
+    width: 100vw;
 }
 header{
     
@@ -48,17 +57,27 @@ header{
     border-radius: 10px;
 }
 /* home section */
-.home-section,
 .our-services,
 footer{
    display: flex;
   align-items: center; 
-  justify-content: space-between; 
-  padding: 60px 140px;
+  justify-content: space-evenly; 
+  padding: 30px 60px;
 
    
 }
+.home-section{
+  display: flex;
+  flex-direction: column;
+
+}
+.home-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .content{
+    padding: 0 80px;
     max-width: 50%;
 }
 .content h1{
@@ -92,42 +111,40 @@ footer{
     
 }
 .achivements{
-    display: flex;
-    align-items: center;   
-    justify-content: space-between;
-    background-color: #3ea9fa;
-    color:  #263641;
-    padding: 30px 20px;
-     max-width: 1200px;
-     margin: 20px auto;
-  
-}
-.achivement{
-   font-size: 1.5rem;
-   font-weight: 600;
-   
-}
-.achivements p{
-    font-size: 1.2rem;
-    font-weight:800;
-  padding: 0 30px;
-
-}
-.achivements p{
-      border-left: 1px solid rgb(255, 255, 255,0.2) ;
-     
-}
-.achivements p:last-child {
-  border-right: none;
-  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3ea9fa;
+  color: #263641;
+  padding: 20px 30px;
+  margin: 0 auto;
+  width: 80%;
 }
 
-.achivements span{
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 300;
-
+.achivement-title{
+  flex: 3;              
+  font-size: 2rem;
+  font-weight: 600;
 }
+
+
+.achivement-item{
+  flex: 1;
+  text-align: center;
+  border-left: 1px solid rgba(255,255,255,0.25);
+}
+
+.achivement-item strong{
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.achivement-item span{
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
 /* services section */
 .our-services{
     display: flex;
@@ -378,6 +395,7 @@ footer{
     color:#3ea9fa;
     font-weight: 400;
 }
+
 .footer-links{
     background-color: #ebeef0;
     padding: 30px 30px;
@@ -395,7 +413,7 @@ footer{
     margin-bottom: 5px;
 }
 .row .link{
-    width: 12%;
+    width: 20%;
 }
 .row ul a,
 .row p a{
@@ -416,4 +434,7 @@ footer{
     font-size: 1.6rem;
     font-weight: 600;
     color: #4f4f51;
+}
+footer{
+    padding-bottom: 0;
 }
