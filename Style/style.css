@@ -191,14 +191,19 @@ footer{
     margin-top: 10px;
 }
 table button{
+    
     float: inline-end;
     margin-top: 10px;
     background-color: #e9efef;
     color: #415456;
     border: none;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 10px 40px;
     cursor: pointer;
+}
+.remove{
+    color: rgb(228, 81, 81);
+    padding: 10px 30px;
 }
 button .plus{
     font-size: 1rem;
@@ -221,6 +226,7 @@ table .last{
     border-bottom: 1px solid rgb(199, 196, 196);
 }
 .message{
+
     margin:15px 0;
     color: #5c66e7;
 }
@@ -325,9 +331,12 @@ table .last{
     
 }
 .add-item-cart{
+    visibility: hidden;
     color: rgb(228, 81, 81);
-   
     font-size: 1rem;
+}
+.visible{
+    visibility: visible;
 }
 
 /* footer section */
