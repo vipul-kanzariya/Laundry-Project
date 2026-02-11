@@ -52,19 +52,18 @@ for (let i = 0; i < btn.length; i++) {
       }
     }
 
-    // Update total
+  
     totalAmountEl.textContent = `₹${totalAmount}`;
 
-    // Show / hide alert row
     alertRow.style.display =
       display.children.length === 0 ? "table-row" : "none";
 
-    // Fix serial numbers
+
     [...display.children].forEach((row, idx) => {
       row.children[0].textContent = idx + 1;
     });
 
-    // Message visibility
+ 
     if (count > 0) {
       cart[0].classList.remove("visible");
       alertMessage[0].style.display = "none";
@@ -75,7 +74,6 @@ for (let i = 0; i < btn.length; i++) {
   });
 }
 
-// Input focus message
 input.forEach(inp => {
   inp.addEventListener("focus", () => {
     if (count === 0) {
@@ -90,18 +88,13 @@ const cartAlert = document.getElementById("cartAlert"); // add-items warning
 bookNowBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  // ❌ No items in cart
   if (display.children.length === 0) {
     cartAlert.style.display = "block";
     cart[0].classList.add("visible");
-    emailStatus.innerHTML =
-      `<ion-icon name="alert-circle-outline"></ion-icon>
-       Add items to the cart to book`;
-    emailStatus.style.color = "red";
+    
     return;
   }
 
-  // ✅ Hide cart warning
   cartAlert.style.display = "none";
 
   let orderDetails = "";
@@ -133,16 +126,16 @@ bookNowBtn.addEventListener("click", (e) => {
       totalAmount = 0;
       totalAmountEl.textContent = "₹0";
 
-      /* ✅ RESET ALL SERVICE BUTTONS */
+    
       btn.forEach(b => {
         b.classList.remove("remove");
         b.innerHTML =
           `Add Item <ion-icon name="add-circle-outline" class="plus"></ion-icon>`;
       });
 
-      /* ✅ SHOW CART ALERT AGAIN */
+    
       alertRow.style.display = "table-row";
-      // ⏳ disappear after 3 sec
+    
       setTimeout(() => {
         emailStatus.innerHTML = "";
       }, 3000);

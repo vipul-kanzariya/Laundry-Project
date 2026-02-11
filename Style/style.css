@@ -94,7 +94,7 @@ footer{
     margin-bottom: 15px;
 }
 
-.content button{
+.content button {
     color: #ffff;
     background-color: #3da8f5;
     padding: 20px 25px;
@@ -102,6 +102,10 @@ footer{
     border-radius: 12px;
     font-size: 1rem;
     cursor: pointer;
+}
+.book-service{
+    text-decoration: none;
+    color: #ffff;
 }
 .icon-store{
     margin-right: 2px;
