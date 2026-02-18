@@ -105,12 +105,17 @@ bookNowBtn.addEventListener("click", (e) => {
     orderDetails += `${service} - ${price}\n`;
   });
 
+  const userEmail = document.querySelector('input[placeholder="Enter Email"]').value;
+
   const templateParams = {
     name: document.querySelector('input[placeholder="Enter Name"]').value,
-    email: document.querySelector('input[placeholder="Enter Email"]').value,
+    email: userEmail,
     phone: document.querySelector('input[type="tel"]').value,
     order: orderDetails,
-    total: `₹${totalAmount}`
+    total: `₹${totalAmount}`,
+    to_email: userEmail,
+    reply_to: userEmail
+
   };
 
   emailjs
