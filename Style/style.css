@@ -103,6 +103,16 @@ footer{
     font-size: 1rem;
     cursor: pointer;
 }
+.book-service-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3da8f5;
+    padding: 20px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
 .book-service{
     text-decoration: none;
     color: #ffff;

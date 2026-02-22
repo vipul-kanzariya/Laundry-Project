@@ -1,3 +1,9 @@
+<!-- 
+ Note:
+ this webpage was  created using references.
+ only some parts are developed using Al.
+-->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,6 +14,7 @@
     <title>Laundry Services Web App</title>
   </head>
   <body>
+    <!-- header section logo,navbar,username -->
     <header>
       <div class="main-nav">
         <div class="logo">Logo</div>
@@ -21,6 +28,7 @@
       </div>
     </header>
     <main>
+      <!-- home section  -->
       <section class="home-section" id="home">
         <div class="home-top">
           <div class="content">
@@ -32,18 +40,20 @@
               and convenience. Schedule a pickup and rediscover the freshness of
               your clothes today!
             </p>
-            <button type="submit">
+            <!-- book service today -->
+            <a href="#services" class="book-service-btn">
               <ion-icon name="storefront-outline" class="icon-store"></ion-icon>
-             <a href="#services" class="book-service"> Book a service today!</a>
-            </button>
+              Book a service today!
+            </a>
           </div>
-
+          <!-- laundry image -->
           <div class="img">
             <img src="Style/img/laundery.png" alt="washing machine" />
           </div>
         </div>
-
+        <!-- achivemenets -->
         <div class="achivements">
+          <!-- heading -->
           <h4 class="achivement-title">Our Achievements</h4>
 
           <div class="achivement-item">
@@ -57,25 +67,25 @@
           </div>
 
           <div class="achivement-item">
-            <strong>2+ Yrs</strong>
+            <strong>2+ Year</strong>
             <span>Experience</span>
           </div>
         </div>
       </section>
-
+      <!-- services section add item , added itmes , book now  -->
       <section class="our-services" id="services">
         <div class="container">
           <div class="left-div">
             <h1>Our Services</h1>
             <p>Click on Add to cart button to add the services to your cart</p>
-
+            <!-- used table to arrange services -->
             <table>
               <tr>
                 <td>
                   <div class="service">
                     <ion-icon name="shirt-outline"></ion-icon>
                     <span class="service-name">Dry Cleaning</span>
-                    
+
                     <span class="price">&#8377;200.00</span>
                   </div>
                   <button class="btn">
@@ -87,7 +97,8 @@
               <tr>
                 <td>
                   <div class="service">
-                    <ion-icon name="bag-handle-outline"></ion-icon><span class="service-name">Wash & Fold</span> 
+                    <ion-icon name="bag-handle-outline"></ion-icon
+                    ><span class="service-name">Wash & Fold</span>
                     <span class="price">&#8377;100.00</span>
                   </div>
                   <button class="btn">
@@ -101,7 +112,8 @@
               <tr>
                 <td>
                   <div class="service">
-                    <ion-icon name="hand-left-outline"></ion-icon><span class="service-name"> Ironing</span>
+                    <ion-icon name="hand-left-outline"></ion-icon
+                    ><span class="service-name"> Ironing</span>
                     <span class="price">&#8377;30.00</span>
                   </div>
                   <button class="btn">
@@ -115,7 +127,8 @@
               <tr>
                 <td>
                   <div class="service">
-                    <ion-icon name="hand-left-outline"></ion-icon><span class="service-name">Stain Removal</span> 
+                    <ion-icon name="hand-left-outline"></ion-icon
+                    ><span class="service-name">Stain Removal</span>
                     <span class="price">&#8377;500.00</span>
                   </div>
                   <button class="btn">
@@ -129,8 +142,9 @@
               <tr>
                 <td>
                   <div class="service">
-                    <ion-icon name="bag-handle-outline"></ion-icon><span class="service-name">Leather &
-                    suede cleaning</span><span class="price">&#8377;990.00</span>
+                    <ion-icon name="bag-handle-outline"></ion-icon
+                    ><span class="service-name">Leather & suede cleaning</span
+                    ><span class="price">&#8377;990.00</span>
                   </div>
                   <button class="btn">
                     Add Item<ion-icon
@@ -143,8 +157,9 @@
               <tr>
                 <td class="last">
                   <div class="service">
-                    <ion-icon name="shirt-outline"></ion-icon><span class="service-name"> Wedding dress
-                    cleaning</span> <span class="price">&#8377;2800.00</span>
+                    <ion-icon name="shirt-outline"></ion-icon
+                    ><span class="service-name"> Wedding dress cleaning</span>
+                    <span class="price">&#8377;2800.00</span>
                   </div>
                   <button class="btn">
                     Add Item<ion-icon
@@ -155,11 +170,13 @@
                 </td>
               </tr>
             </table>
+            <!-- display add itme to cart message -->
             <p class="message">
               <ion-icon name="alert-circle-outline"></ion-icon>Add the item to
               the cart and book now
             </p>
           </div>
+          <!-- right side div added itmes -->
           <div class="right-div">
             <div class="added-items">
               <h2>Added Items</h2>
@@ -169,6 +186,7 @@
                   <th>Service Name</th>
                   <th>Price</th>
                 </tr>
+                <!-- used javascript to display added itmes  -->
                 <tbody class="display-list"></tbody>
                 <tr class="alert-row">
                   <td colspan="3">
@@ -183,27 +201,29 @@
                     </div>
                   </td>
                 </tr>
+                <!-- calculate total amount and display it -->
                 <tr class="amount">
                   <td colspan="2" class="total-amount">Total Amount</td>
                   <td class="final-price">&#8377;0</td>
                 </tr>
               </table>
             </div>
-
+            <!-- book now using email -->
             <div class="book-now">
               <h2>Book Now</h2>
               <form action="#">
+                <!-- full name -->
                 <div class="form-group">
                   <label>Full Name</label>
                   <input type="text" class="inp" placeholder="Enter Name" />
                 </div>
-
+                <!-- email id -->
                 <div class="row">
                   <div class="form-group">
                     <label>Email ID</label>
                     <input type="email" class="inp" placeholder="Enter Email" />
                   </div>
-
+                  <!-- phone number -->
                   <div class="form-group">
                     <label>Phone Number</label>
                     <input type="tel" class="inp" placeholder="0000000" />
@@ -211,8 +231,11 @@
                 </div>
                 <button id="bookNow" type="button">Book Now</button>
               </form>
+              <!-- display email verification message usign js -->
               <div class="add-item-cart">
-                <p id="emailStatus" class="email-status"></p><p id="cartAlert">
+                <p id="emailStatus" class="email-status"></p>
+                <!-- diplay add itmes to the cart message -->
+                <p id="cartAlert">
                   <ion-icon name="alert-circle-outline"></ion-icon>Add the items
                   to the cart to book
                 </p>
@@ -222,9 +245,11 @@
         </div>
       </section>
     </main>
+    <!-- footer section -->
     <footer>
       <div class="footer-services" id="aboutus">
         <div class="row">
+          <!-- display services -->
           <div class="footer-service">
             <div class="logo">
               <img src="Style/img/laundry-machine.png" alt="" />
@@ -264,6 +289,7 @@
             </p>
           </div>
         </div>
+        <!-- subscribe to news letter -->
         <div class="middle-footer" id="contactus">
           <div class="subscibe">
             <h4>Subscribe to our newsletter.</h4>
@@ -276,6 +302,7 @@
             </form>
           </div>
         </div>
+        <!-- display about,concat,important links,follow us  -->
         <div class="footer-links">
           <div class="row">
             <div class="link">
@@ -324,11 +351,11 @@
     </footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function () {
-    emailjs.init("OSE5691WkdyMWbvO4");
-  })();
-</script>
+  <script>
+    (function () {
+      emailjs.init("OSE5691WkdyMWbvO4");
+    })();
+  </script>
 
   <script src="Script/script.js"></script>
   <script
