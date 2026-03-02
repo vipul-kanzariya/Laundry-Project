@@ -1,3 +1,7 @@
+// Note:only external help I used was EmailJS for the email sending functionality.
+//  All other features and logic were implemented by me.
+
+// used to get value,text and other items
 const btn = document.querySelectorAll(".btn");
 const input = document.querySelectorAll(".inp");
 const cart = document.getElementsByClassName("add-item-cart");
@@ -6,12 +10,13 @@ const display = document.querySelector(".display-list");
 const alertRow = document.querySelector(".alert-row");
 const totalAmountEl = document.querySelector(".final-price");
 
+// used count variable to display (add itmes to cart) message
 let count = 0;
 let totalAmount = 0;
-
+// used to get services and display added items box
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
-
+    //get the service name,price
     const serviceDiv = btn[i].previousElementSibling;
     const serviceName = serviceDiv.querySelector(".service-name").textContent;
     const priceText = serviceDiv.querySelector(".price").textContent;
@@ -20,7 +25,7 @@ for (let i = 0; i < btn.length; i++) {
     btn[i].classList.toggle("remove");
 
     if (btn[i].classList.contains("remove")) {
-      // ADD ITEM
+      // Add item 
       btn[i].innerHTML =
         `Remove Item <ion-icon name="remove-circle-outline"></ion-icon>`;
 
@@ -37,10 +42,9 @@ for (let i = 0; i < btn.length; i++) {
 
       display.appendChild(row);
       totalAmount += price;
-
     } else {
-      // REMOVE ITEM
-      btn[i].innerHTML =
+      // Remove item
+        btn[i].innerHTML =
         `Add Item <ion-icon name="add-circle-outline" class="plus"></ion-icon>`;
 
       count--;
@@ -52,18 +56,15 @@ for (let i = 0; i < btn.length; i++) {
       }
     }
 
-  
     totalAmountEl.textContent = `₹${totalAmount}`;
 
     alertRow.style.display =
       display.children.length === 0 ? "table-row" : "none";
 
-
     [...display.children].forEach((row, idx) => {
       row.children[0].textContent = idx + 1;
     });
-
- 
+    //display alert messsage 
     if (count > 0) {
       cart[0].classList.remove("visible");
       alertMessage[0].style.display = "none";
@@ -74,39 +75,42 @@ for (let i = 0; i < btn.length; i++) {
   });
 }
 
-input.forEach(inp => {
+input.forEach((inp) => {
   inp.addEventListener("focus", () => {
     if (count === 0) {
       cart[0].classList.add("visible");
     }
   });
 });
+//get email form 
 const bookNowBtn = document.getElementById("bookNow");
 const emailStatus = document.getElementById("emailStatus");
 const cartAlert = document.getElementById("cartAlert"); // add-items warning
-
+//on click book now button
 bookNowBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (display.children.length === 0) {
     cartAlert.style.display = "block";
     cart[0].classList.add("visible");
-    
+
     return;
   }
 
   cartAlert.style.display = "none";
 
   let orderDetails = "";
-
+  //create oreder details string
   [...display.children].forEach((row) => {
     const service = row.children[1].textContent;
     const price = row.children[2].textContent;
     orderDetails += `${service} - ${price}\n`;
   });
-
-  const userEmail = document.querySelector('input[placeholder="Enter Email"]').value;
-
+//get user email
+  const userEmail = document.querySelector(
+    'input[placeholder="Enter Email"]',
+  ).value;
+  //used to send data to emailjs
   const templateParams = {
     name: document.querySelector('input[placeholder="Enter Name"]').value,
     email: userEmail,
@@ -114,45 +118,40 @@ bookNowBtn.addEventListener("click", (e) => {
     order: orderDetails,
     total: `₹${totalAmount}`,
     to_email: userEmail,
-    reply_to: userEmail
-
+    reply_to: userEmail,
   };
 
   emailjs
     .send("service_lrpo3gm", "template_mmloi9s", templateParams)
     .then(() => {
+      //display success message
       cart[0].classList.add("visible");
-      emailStatus.innerHTML =
-        `<ion-icon name="checkmark-circle-outline"></ion-icon>
+      emailStatus.innerHTML = `<ion-icon name="checkmark-circle-outline"></ion-icon>
          Email sent successfully`;
 
       emailStatus.style.color = "green";
-       display.innerHTML = "";
+      display.innerHTML = "";
       totalAmount = 0;
       totalAmountEl.textContent = "₹0";
 
-    
-      btn.forEach(b => {
+      btn.forEach((b) => {
         b.classList.remove("remove");
-        b.innerHTML =
-          `Add Item <ion-icon name="add-circle-outline" class="plus"></ion-icon>`;
+        b.innerHTML = `Add Item <ion-icon name="add-circle-outline" class="plus"></ion-icon>`;
       });
 
-    
       alertRow.style.display = "table-row";
-    
+
       setTimeout(() => {
         emailStatus.innerHTML = "";
       }, 3000);
-      document.querySelectorAll(".inp").forEach(inp => {
-  inp.value = "";
+      document.querySelectorAll(".inp").forEach((inp) => {
+        inp.value = "";
       });
     })
     .catch((err) => {
       console.error(err);
-
-      emailStatus.innerHTML =
-        `<ion-icon name="alert-circle-outline"></ion-icon>
+      //display failed message 
+      emailStatus.innerHTML = `<ion-icon name="alert-circle-outline"></ion-icon>
          Failed to send email`;
 
       emailStatus.style.color = "red";
@@ -162,4 +161,3 @@ bookNowBtn.addEventListener("click", (e) => {
       }, 3000);
     });
 });
-
