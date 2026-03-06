@@ -1,4 +1,4 @@
-// Note:only external help I used was EmailJS for the email sending functionality.
+// Note:only some external help I used was EmailJS for the email sending functionality.
 //  All other features and logic were implemented by me.
 
 // used to get value,text and other items
@@ -74,7 +74,10 @@ for (let i = 0; i < btn.length; i++) {
     }
   });
 }
-
+//in email only accept numbers
+document.getElementById("phone").addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
 input.forEach((inp) => {
   inp.addEventListener("focus", () => {
     if (count === 0) {
@@ -114,7 +117,7 @@ bookNowBtn.addEventListener("click", (e) => {
   const templateParams = {
     name: document.querySelector('input[placeholder="Enter Name"]').value,
     email: userEmail,
-    phone: document.querySelector('input[type="tel"]').value,
+    phone: document.querySelector('input[type="phone"]').value,
     order: orderDetails,
     total: `₹${totalAmount}`,
     to_email: userEmail,
